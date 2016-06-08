@@ -3,25 +3,86 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Box Starter</title>
+	<title>Swappy Form</title>
 	<link rel="icon" href="./favicon.png">
 	<link rel="stylesheet" href="style/box.css">
 	<link rel="stylesheet" href="style/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
-	<nav class="boxActions">
-		<a href="#" id="previous_box" title="Previous box">
-			<img src="img/back-icon.svg" alt="back" />
-		</a>
-		<a href="#" id="box_home" title="Box home">
-			<img src="img/krdsbox.svg" alt="KRDS Box" />
-		</a>
-		<a href="#" id="github_repo" title="Github repo">
-			<img src="img/github.svg" alt="Github" />
-		</a>
-	</nav>
-	<h1>Box Starter</h1>
-	<p>An optional &amp; minimal starter kit for krdsbox components</p>
+	<div class="container">
+		<div class="mainContainer">
+			<header>				
+				<h1>Swappy Form</h1>
+				<p>Login form using some interesting CSS technique</p>
+				<nav class="boxActions">
+					<a href="#" id="previous_box" title="Previous box">
+						<img src="img/back-icon.svg" alt="back" />
+					</a>
+					<a href="#" id="box_home" title="Box home">
+						<img src="img/krdsbox.svg" alt="KRDS Box" />
+					</a>
+					<a href="#" id="github_repo" title="Github repo">
+						<img src="img/github.svg" alt="Github" />
+					</a>
+				</nav>
+			</header>
+			<div class="formPage">
+				<nav class="formCtlWrapper">
+					<a href="#" class="btn login active" data-tab="tab-1">login</a>
+					<i></i>
+					<a href="#" class="btn register" data-tab="tab-2">register</a>
+				</nav>
+
+				<form name="loginform" class="login formBlock active" id="tab-1">
+					<h4>Login:</h4>
+					<div class="input-group">
+						<p class="formLabel">Email</p>
+						<input type="text" name="email" id="email" autocomplete="off">
+					</div>
+					<div class="input-group">
+						<p class="formLabel">Password</p>
+						<input type="password" name="password" id="password">
+					</div>
+					<div class="checkbox-group">
+						<label class="form-remember">
+							<input type="checkbox"> <span>Remember Me</span>
+						</label>
+						<a href="#" class="form-recovery">Forgot Password?</a>
+					</div>
+					<p id="errors" class="error"></p>
+					<div class="form-group">
+						<button type="submit" onclick="return validateLogin();">Log In</button>
+					</div>
+					<a href="#" class="register" data-tab="tab-2">Register</a>
+				</form>
+				<form name="registerform" class="register formBlock" id="tab-2">
+					<h4>Register:</h4>
+					<div class="input-group">
+						<p class="formLabel">Username</p>
+						<input type="text" id="username" name="username" autocomplete="off">
+					</div>
+					<div class="input-group">
+						<p class="formLabel">Password</p>
+						<input type="password" id="password" name="password">
+					</div>
+					<div class="input-group">
+						<p class="formLabel">Confirm Password</p>
+						<input type="password" id="cpassword" name="cpassword">
+					</div>
+					<div class="input-group">
+						<p class="formLabel">Email Address</p>
+						<input type="text" id="email" name="email" autocomplete="off">
+					</div>
+					<p id="registererrors" class="error"></p>
+					<div class="form-group">
+						<button type="submit" id="registerSubmit" onclick="return validateRegister();">Register</button>
+					</div>
+				</form>
+			</div> <!-- /.formPage -->
+		</div> <!-- /.mainContainer -->
+	</div> <!-- /.container -->
 	<script src="js/main.js"></script>
 </body>
 </html>
