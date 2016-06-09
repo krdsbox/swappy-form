@@ -3,8 +3,8 @@
 	"description": "Login form using some interesting CSS technique",
 	"author": "Vijayakumar",
 	"author-email": "vijayakumar.a@krds.fr",
-	"image": "",
-	"gif": "",
+	"image": "img/packshot.png",
+	"gif": "img/packshot.gif",
 	"tags": "login, form",
 	"repo-url": "https://github.com/krdsbox/swappy-form"
 }
